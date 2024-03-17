@@ -1,5 +1,5 @@
 package BackEnd.Cards.SoccersPlayersCards;
 
-public abstract interface PlayersCards {
+public abstract interface PlayerCard {
       void CardStatus();
 }
