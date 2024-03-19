@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8AB647;
+  --secondary: #AFCD83;
+  --tertiary: #C5D8A0;
+  --quaternary: black;
+  --container: #DBEAFE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  background-color: var(--tertiary);
+  color: black;
+}
+
+
+.input {
+  border: 2px solid var(--quaternary);
+  height: 35px;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 16px;
+  background-color: var(--tertiary);
+  color: var(--quaternary);
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input::placeholder {
+  color: var(--quaternary);
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  background-color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  height: 35px;
+  margin: 5px;
+  border-radius: 9px;
+  border-bottom: 3px solid var(--quaternary);
+  transition: filter 180ms;
+}
+
+
+.button:hover {
+  filter: brightness(0.75);
+}
+
+
+.App {
+  text-align: center;
+}
+
+.fieldContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.fieldImage {
+  max-width: 100%; /* Garante que a imagem do campo se ajuste ao tamanho da tela */
+}
+
+.card {
+  position: absolute;
+}
+
+.cartaImage {
+  max-width: 100%;
+  height: 178px;
+  width: 128px;
+}
+
+/* Posicionamento das cartas */
+.carta1 {
+  top: 60%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+}
+
+.cartaImage2 {
+  max-width: 100%;
+  height: 178px;
+  width: 128px;
+  background-color: black;
+  color: blue;
+}
+.carta2 {
+  top: 40.90%;
+  left: 29.75%;
+}
+
+.blackRectangle {
+  position: absolute;
+  height: 178px;
+  width: 128px;
+  border: 2px solid black;
+  top: 40.90%;
+  left: 29.75%;
+}
+
