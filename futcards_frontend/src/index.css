@@ -73,9 +73,9 @@ button {
   max-width: 100%; /* Garante que a imagem do campo se ajuste ao tamanho da tela */
 }
 
-.card {
+/*.card {
   position: absolute;
-}
+}*/
 
 .cartaImage {
   max-width: 100%;
@@ -84,13 +84,14 @@ button {
 }
 
 /* Posicionamento das cartas */
-.carta1 {
+.cartaColocada {
+  position: absolute;
   top: 60%;
-  left: 61%;
+  left: 54.2%;
   transform: translate(-50%, -50%);
 }
 
-.cartaImage2 {
+/*.cartaImage2 {
   max-width: 100%;
   height: 178px;
   width: 128px;
@@ -100,14 +101,14 @@ button {
 .carta2 {
   top: 40.90%;
   left: 29.75%;
-}
+}*/
 
-.blackRectangle {
+.deckCardsContainer {
   position: absolute;
   height: 178px;
   width: 128px;
   border: 2px solid black;
   top: 40.90%;
-  left: 29.75%;
+  left: 26.4%;
 }
 

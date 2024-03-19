@@ -12,23 +12,6 @@ const defaultUserPlayerFormData: UserPlayerInterface = {
 function App() {
   const [userPlayer, setUserPlayer] = useState<UserPlayerInterface>({ ...defaultUserPlayerFormData });
 
-  function startGame() {
-    if(validateGameMenuFields()) {
-      console.log("Nick name válido")
-    } else {
-      console.log("Nick name inválido")
-    }
-    
-    console.log(userPlayer.nickName);
-  }
-
-  function validateGameMenuFields(): boolean {
-    if(userPlayer.nickName.length > 4) {
-
-      return true;
-    }
-    return false;
-  }
 
   return (
     <>
@@ -37,7 +20,7 @@ function App() {
         <div className="bg-gray-300 col-span-4">Espaço 1</div>
 
         <div className="bg-blue-300 col-span-4">
-        <GameMenu userPlayerFormData={userPlayer} setUserPlayerFormData={setUserPlayer} startGame={startGame} />
+        <GameMenu userPlayerFormData={userPlayer} setUserPlayerFormData={setUserPlayer} />
         </div>
 
         <div className="bg-red-300 col-span-4">Espaço 3</div>

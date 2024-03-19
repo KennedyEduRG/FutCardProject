@@ -4,9 +4,7 @@ import { UserPlayerInterface } from "../../interfaces/UserPlayerInterface";
 
 interface TaskFormProps {
   userPlayerFormData: UserPlayerInterface;
-  setUserPlayerFormData: React.Dispatch<React.SetStateAction<UserPlayerInterface>
-  >;
-  startGame: () => void;
+  setUserPlayerFormData: React.Dispatch<React.SetStateAction<UserPlayerInterface>>;
 }
 
 export function GameMenu(props: TaskFormProps) {
@@ -31,15 +29,20 @@ export function GameMenu(props: TaskFormProps) {
     switch (status) {
       case "A fazer":
         return 1;
-
       case "Em andamento":
         return 2;
-
       case "Concluída":
         return 3;
-
       default:
         return 0;
+    }
+  }
+
+  function startGame() {
+    if (props.userPlayerFormData.nickName.length > 4) {
+      window.location.href = "/match";
+    } else {
+      console.log("Não é para redirecionar");
     }
   }
 
@@ -64,11 +67,10 @@ export function GameMenu(props: TaskFormProps) {
               </option>
             ))}
           </select>
-          {/*<br /><p>Valor selecionado: {props.taskFormData.status}</p>*/}
         </div>
 
         <div className={styles.buttonContainer}>
-          <button className="button" onClick={props.startGame}>
+          <button className="button" onClick={startGame}>
             Iniciar partida
           </button>
         </div>
