@@ -19,6 +19,13 @@ public class PlayerCardService {
 		return finances;
 	}
 	
+	public PlayerCard findById(Long cardId) throws Exception {
+		PlayerCard entity = cardRepository.findById(cardId)
+				.orElseThrow(() -> new Exception("Não foi possível atualizar"));
+
+		return entity;
+	}
+	
 	
 	public PlayerCard create(PlayerCard card) throws Exception {
 		/*if(card.getNome().length() < 5) {
@@ -27,5 +34,21 @@ public class PlayerCardService {
 		}*/
 		PlayerCard createdCard = cardRepository.save(card);
 		return createdCard;
+	}
+	
+	public PlayerCard update(PlayerCard card) throws Exception {
+		PlayerCard entity = cardRepository.findById(card.getId())
+				.orElseThrow(() -> new Exception("Não foi possível atualizar"));
+		
+		PlayerCard updatedCard = cardRepository.save(card);
+		return updatedCard;
+	}
+	
+	
+	public void delete(Long cardId) throws Exception {
+		PlayerCard entity = cardRepository.findById(cardId)
+				.orElseThrow(() -> new Exception("Não foi possível atualizar"));
+
+		cardRepository.delete(entity);
 	}
 }
