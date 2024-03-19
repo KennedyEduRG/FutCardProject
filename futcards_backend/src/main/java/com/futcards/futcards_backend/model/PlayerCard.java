@@ -17,7 +17,7 @@ public class PlayerCard implements Serializable {
 
 	@Size(min = 5, max = 30, message = "O nome deve ter entre 5 e 30 caracteres")
 	private String nome;
-	private String posicaoJogador;
+	protected String posicaoJogador;
 	private Double altura;
 	private Double massa;
 	private Double forca;
