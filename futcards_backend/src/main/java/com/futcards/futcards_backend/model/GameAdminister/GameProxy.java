@@ -6,7 +6,7 @@ public class GameProxy implements GameAdminister {
     private GameAdminister game;
 
     public GameProxy(){
-        game = new Game();
+        game = new GameAdministerClass();
     }
 
     @Override
