@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { UserPlayerInterface } from "../../interfaces/UserPlayerInterface";
 
@@ -8,7 +8,8 @@ interface TaskFormProps {
 }
 
 export function GameMenu(props: TaskFormProps) {
-  const options = ["A fazer", "Em andamento", "Concluída"];
+  const options = ["Modo 1", "Modo 2", "Modo 3"];
+  const [validateFields, setValidateFields] = useState(false)
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -27,11 +28,11 @@ export function GameMenu(props: TaskFormProps) {
 
   function convertStringToIntegerStatus(status: string) {
     switch (status) {
-      case "A fazer":
+      case "Modo 1":
         return 1;
-      case "Em andamento":
+      case "Modo 2":
         return 2;
-      case "Concluída":
+      case "Modo 3":
         return 3;
       default:
         return 0;
@@ -39,10 +40,11 @@ export function GameMenu(props: TaskFormProps) {
   }
 
   function startGame() {
-    if (props.userPlayerFormData.nickName.length > 4) {
+    if (props.userPlayerFormData.nickName.length >= 5 && props.userPlayerFormData.nickName.length <= 15) {
       window.location.href = "/match";
     } else {
-      console.log("Não é para redirecionar");
+      setValidateFields(true)
+      console.log("Nickname deve ter pelo menos 5 caracteres");
     }
   }
 
@@ -52,6 +54,7 @@ export function GameMenu(props: TaskFormProps) {
         <span className={styles.formTitle}>Menu de jogo</span>
         <span className={styles.formClose}>&times;</span>
         <div className={styles.inputContainer}>
+          {validateFields &&<p className="text-red-600">Nickname precisa ter de 5 até 15 caracteres</p>}
           <input
             className="input"
             name="nickName"
@@ -70,8 +73,11 @@ export function GameMenu(props: TaskFormProps) {
         </div>
 
         <div className={styles.buttonContainer}>
+          <button className="button">
+            Criar partida
+          </button>
           <button className="button" onClick={startGame}>
-            Iniciar partida
+            Entrar partida
           </button>
         </div>
       </div>

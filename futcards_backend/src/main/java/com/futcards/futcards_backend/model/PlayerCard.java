@@ -28,6 +28,23 @@ public class PlayerCard implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	
+	public PlayerCard(String nome, String posicaoJogador, Double altura, Double massa, Double forca, Double velocidadeX,
+			Double velocidadeY, Double aceleracao, Long id) {
+		this.nome = nome;
+		this.posicaoJogador = posicaoJogador;
+		this.altura = altura;
+		this.massa = massa;
+		this.forca = forca;
+		this.velocidadeX = velocidadeX;
+		this.velocidadeY = velocidadeY;
+		this.aceleracao = aceleracao;
+		this.id = id;
+	}
+	
+	
+	public PlayerCard() {}
 
 	public String getNome() {
 		return nome;
@@ -104,22 +121,6 @@ public class PlayerCard implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-	public PlayerCard(String nome, String posicaoJogador, Double altura, Double massa, Double forca, Double velocidadeX,
-			Double velocidadeY, Double aceleracao, Long id) {
-		this.nome = nome;
-		this.posicaoJogador = posicaoJogador;
-		this.altura = altura;
-		this.massa = massa;
-		this.forca = forca;
-		this.velocidadeX = velocidadeX;
-		this.velocidadeY = velocidadeY;
-		this.aceleracao = aceleracao;
-		this.id = id;
-	}
-	
-	
-	public PlayerCard() {}
 
 	@Override
 	public int hashCode() {

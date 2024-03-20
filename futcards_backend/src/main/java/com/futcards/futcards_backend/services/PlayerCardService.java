@@ -15,8 +15,8 @@ public class PlayerCardService {
 	private PlayerCardRepository cardRepository;
 
 	public List<PlayerCard> findAll() {
-		List<PlayerCard> finances = cardRepository.findAll();
-		return finances;
+		List<PlayerCard> cards = cardRepository.findAll();
+		return cards;
 	}
 	
 	public PlayerCard findById(Long cardId) throws Exception {

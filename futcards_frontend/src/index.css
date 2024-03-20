@@ -77,19 +77,19 @@ button {
   position: absolute;
 }*/
 
-.cartaImage {
+/*.cartaImage {
   max-width: 100%;
   height: 178px;
   width: 128px;
-}
+}*/
 
 /* Posicionamento das cartas */
-.cartaColocada {
+/*.cartaColocada {
   position: absolute;
   top: 60%;
   left: 54.2%;
   transform: translate(-50%, -50%);
-}
+}*/
 
 /*.cartaImage2 {
   max-width: 100%;
@@ -109,6 +109,15 @@ button {
   width: 128px;
   border: 2px solid black;
   top: 40.90%;
-  left: 26.4%;
+  left: 29.7%;
+}
+
+.cardOnField {
+  height: 178px;
+  width: 128px;
+  position: absolute;
+  top: 60%;
+  left: 61%;
+  transform: translate(-50%, -50%);
 }
 
