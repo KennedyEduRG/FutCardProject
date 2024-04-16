@@ -4,7 +4,7 @@ import com.futcards.futcards_backend.model.User.User;
 
 public class GameProxy implements GameAdminister {
     private GameAdminister game;
-
+ 
     public GameProxy(){
         game = new GameAdministerClass();
     }
@@ -17,10 +17,8 @@ public class GameProxy implements GameAdminister {
 
     @Override
     public void GameCreator() {
-        if(playersWaiting.size() >= 2){
+        if(this.getPlayersNum() >= 2){
             game.GameCreator();
-            playersWaiting.remove(0);
-            playersWaiting.remove(1);
         }
 
     }
@@ -30,6 +28,11 @@ public class GameProxy implements GameAdminister {
         if(player.isItsLoged()){
             game.GameSave(player);
         }
+    }
+
+    @Override
+    public long getPlayersNum() {
+        return game.getPlayersNum();
     }
     
 }
