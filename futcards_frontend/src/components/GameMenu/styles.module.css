@@ -1,47 +1,91 @@
+.container {
+  text-align: center;
+}
 .formContainer {
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--secondary);
-    border: 3px solid black;
-    padding: 20px;
-    border-radius: 15px;
-    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);*/
-    width: 30%;
+  /*position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  background-color: var(--secondary);
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px; /* Adiciona um espaço superior */
+  padding: 10px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;*/
 
-  .buttonContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 85%;
-  }
+  /*border: 1px solid #ccc;  Borda */
+}
 
-  .formTitle {
-    font-size: 35px;
-  }
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+}
 
-  .formClose {
-    font-size: 35px;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    cursor: pointer;
-  }
+.formTitle {
+  font-size: 35px;
+}
 
-  .blur {
-    filter: blur(5px);
-  }
+.formClose {
+  font-size: 35px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
 
-  .inputContainer {
-    width: 90%;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.blur {
+  filter: blur(5px);
+}
+
+.inputContainer {
+  width: 90%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.versusContainer {
+  margin-top: 20px; /* Adiciona um espaço superior */
+  padding: 10px;
+  background-color: #f0f0f0; /* Cor de fundo */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  display: flex; /* Ativa o layout flexbox */
+  justify-content: space-between; /* Distribui os elementos uniformemente ao longo do eixo principal */
+  display: flex; /* Ativa o layout flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.playerImageContainer {
+  background-color: red; /* Cor de fundo */
+  border: 1px solid blue; /* Borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  width: 150px;
+  height: 150px;
+}
+
+.versusText {
+  margin: 0 10px; /* Adiciona margem para separar o texto dos jogadores */
+}
+
+.codeContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startMatchButtonContainer {
+  width: 200px;
+  margin: 0 auto;
+}

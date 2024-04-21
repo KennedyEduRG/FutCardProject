@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --primary: #8AB647;
-  --secondary: #AFCD83;
-  --tertiary: #C5D8A0;
+  --primary: #8ab647;
+  --secondary: #afcd83;
+  --tertiary: #c5d8a0;
   --quaternary: black;
-  --container: #DBEAFE;
+  --container: #dbeafe;
 }
 
 * {
@@ -20,7 +20,6 @@ body {
   background-color: var(--tertiary);
   color: black;
 }
-
 
 .input {
   border: 2px solid var(--quaternary);
@@ -54,11 +53,9 @@ button {
   transition: filter 180ms;
 }
 
-
 .button:hover {
   filter: brightness(0.75);
 }
-
 
 .App {
   text-align: center;
@@ -108,7 +105,7 @@ button {
   height: 178px;
   width: 128px;
   border: 2px solid black;
-  top: 40.90%;
+  top: 40.9%;
   left: 29.7%;
 }
 
@@ -120,4 +117,3 @@ button {
   left: 61%;
   transform: translate(-50%, -50%);
 }
-
