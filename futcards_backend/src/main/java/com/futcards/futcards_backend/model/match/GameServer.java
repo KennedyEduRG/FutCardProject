@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class GameServer {
-	//Map<String, Player> players = new HashMap<String, Player>();
-	//List<GameRoom> rooms = new ArrayList<GameRoom>();
-	/*private String player;
+	Map<String, Player> players = new HashMap<String, Player>();
+	List<GameRoom> rooms = new ArrayList<GameRoom>();
+	private String player;
 	private GameServer match;
 	
 	public String getPlayer() {
@@ -27,7 +27,7 @@ public class GameServer {
 	}
 	public void setMatch(GameServer match) {
 		this.match = match;
-	}*/
+	}
 	
 	
 }

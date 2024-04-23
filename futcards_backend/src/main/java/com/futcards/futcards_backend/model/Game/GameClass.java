@@ -11,6 +11,8 @@ public class GameClass implements Game{
     private User player2;
     private List<PlayerCard> player1Cards = new ArrayList<PlayerCard>();
     private List<PlayerCard> player2Cards = new ArrayList<PlayerCard>();
+    private PlayerCard SelectP1 = new PlayerCard();
+    private PlayerCard SelectP2 = new PlayerCard();
 
     public GameClass(User player1, User player2 ){
         this.player1 = player1;
