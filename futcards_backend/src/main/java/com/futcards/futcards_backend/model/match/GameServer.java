@@ -16,7 +16,7 @@ public class GameServer {
 	}
 	
 	public GameServer() {
-		
+
 	}
 	
 	public void setPlayer(String player) {
