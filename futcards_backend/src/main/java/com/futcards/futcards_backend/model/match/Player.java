@@ -17,17 +17,16 @@ public class Player {
     private String nickname;
     private List<PlayerCard> hand;
     private Session webSocketSession;
-    private String position;
+    private int position;
 
-    public Player(String nickname, Session webSocketSession, String position) {
+    public Player(String nickname, Session webSocketSession, int position) {
         this.playerId = UUID.randomUUID().toString();
         this.nickname = nickname;
         this.hand = new ArrayList<>();
         this.webSocketSession = webSocketSession;
         this.position = position;
 
-        // Carregar 4 cartas para a mão do jogador
-        loadCardsForPosition(position);
+        loadCardsForPosition();
     }
 
     public String getNickname() {
@@ -63,12 +62,29 @@ public class Player {
     }
 
     // Carregar 4 cartas aleatórias para a posição especificada
-    private void loadCardsForPosition(String position) {
+    private void loadCardsForPosition() {
         File file = new File("futcards_backend/src/main/resources/PARAMETROS DOS JOGADORES.xlsx"); 
-             List<Map<String, Double>> positionData = loadPositionData(file, position);
+        Random random =  new Random();
+        int randomInt = random.nextInt(3);
+        String position = null;
+        switch (randomInt) {
+            case 0:
+                position = "atacante";
+                break;
+            case 1: 
+                position = "meio campo";
+                break;
+            case 2:
+                position = "zagueiro";
+                break;
+            case 3:
+                position = "goleiro";
+            default:
+                break;
+        }
+        List<Map<String, Double>> positionData = loadPositionData(file, position);
 
         // Selecionar 4 cartas aleatórias
-        Random random = new Random();
         Set<Integer> selectedIndices = new HashSet<>();
 
         while (selectedIndices.size() < 4) { // Garante que teremos 4 cartas únicas

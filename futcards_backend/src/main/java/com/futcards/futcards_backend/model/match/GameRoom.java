@@ -75,8 +75,7 @@ public class GameRoom {
     }
 
     public void playRound(PlayerCard card1, PlayerCard card2) {
-        String question = "Qual carta é mais forte?"; // Pergunta para determinar a carta vencedora
-        sendQuestionToPlayers(question);
+        sendQuestionToPlayers(this.getRandomQuestion());
 
         // Lógica para determinar o vencedor da rodada
         PlayerCard winnerCard = determineWinner(card1, card2);
@@ -90,7 +89,6 @@ public class GameRoom {
     }
 
     private PlayerCard determineWinner(PlayerCard card1, PlayerCard card2) {
-        this.getRandomQuestion();
 
         switch (numRandomCard) {
             case 0:
@@ -131,5 +129,10 @@ public class GameRoom {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void receivePlayerCardChoice(Player player, String message) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'receivePlayerCardChoice'");
     }
 }
