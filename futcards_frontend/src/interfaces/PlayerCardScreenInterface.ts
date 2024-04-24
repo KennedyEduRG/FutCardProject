@@ -1,12 +1,12 @@
 export interface PlayerCardScreenInterface {
-    nome: string;
-    posicaoJogador: string | undefined;
-    altura: number;
-    massa: number;
-    forca: number;
-    velocidadeX: number;
-    velocidadeY: number;
-    aceleracao: number;
-    id: number;
-    screenPosition: string
+  Vx: number;
+  Vy: number;
+  F: number;
+  a: number;
+  m: number;
+  H: number;
+  posicaoJogador: string | undefined;
+  id: number;
+  screenPosition: string;
+  nome: string;
 }

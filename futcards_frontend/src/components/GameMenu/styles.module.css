@@ -89,3 +89,72 @@
   width: 200px;
   margin: 0 auto;
 }
+
+.handCardsContainer {
+  position: absolute;
+  height: 420px;
+  width: 1280px;
+  border: 2px solid black;
+  top: 55%;
+  left: 105%;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardOnHand {
+  width: 320px;
+  height: 420px;
+}
+
+.hPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid blue;
+  top: 67.5%;
+  left: 4.8%;
+}
+.VxPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid red;
+  top: 67.5%;
+  left: 16.8%;
+}
+
+.mPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid white;
+  top: 78%;
+  left: 4.8%;
+}
+
+.VyPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid green;
+  top: 77.9%;
+  left: 16.8%;
+}
+
+.fcPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid yellow;
+  top: 88.5%;
+  left: 4.8%;
+}
+
+.axPosition {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  border: 2px solid purple;
+  top: 88.5%;
+  left: 16.8%;
+}

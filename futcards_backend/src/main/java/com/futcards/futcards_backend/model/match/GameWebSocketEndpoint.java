@@ -6,8 +6,6 @@ import jakarta.websocket.server.ServerEndpoint;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
-import com.futcards.futcards_backend.model.match.GameRoom;
-
 
 @ServerEndpoint("/game/{roomId}/{playerId}")
 public class GameWebSocketEndpoint {
