@@ -131,8 +131,7 @@ public class GameRoom {
         }
     }
 
-    public void receivePlayerCardChoice(Player player, String message) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'receivePlayerCardChoice'");
+    public void receivePlayerCardChoice(Player player, PlayerCard message) {
+        player.hand = message;
     }
 }

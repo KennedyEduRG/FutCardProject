@@ -15,14 +15,13 @@ import com.futcards.futcards_backend.model.PlayerCard;
 public class Player {
     private String playerId;
     private String nickname;
-    private List<PlayerCard> hand;
+    PlayerCard hand;
     private Session webSocketSession;
     private int position;
 
     public Player(String nickname, Session webSocketSession, int position) {
         this.playerId = UUID.randomUUID().toString();
         this.nickname = nickname;
-        this.hand = new ArrayList<>();
         this.webSocketSession = webSocketSession;
         this.position = position;
     }
@@ -39,23 +38,11 @@ public class Player {
         this.webSocketSession = session;
     }
 
-    public List<PlayerCard> getHand() {
+    public PlayerCard getHand() {
         return hand;
     }
 
     public void addCardToHand(PlayerCard card) {
-        hand.add(card);
-    }
-
-    public void removeCardFromHand(PlayerCard card) {
-        hand.remove(card);
-    }
-
-    public PlayerCard chooseCardToPlay(int index) {
-        if (index >= 0 && index < hand.size()) {
-            return hand.remove(index);
-        } else {
-            throw new IndexOutOfBoundsException("Índice de carta inválido");
-        }
+        hand = card;
     }
 }

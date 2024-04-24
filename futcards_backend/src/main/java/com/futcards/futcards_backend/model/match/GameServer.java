@@ -15,10 +15,6 @@ public class GameServer {
 		return player;
 	}
 	
-	public GameServer() {
-
-	}
-	
 	public void setPlayer(String player) {
 		this.player = player;
 	}

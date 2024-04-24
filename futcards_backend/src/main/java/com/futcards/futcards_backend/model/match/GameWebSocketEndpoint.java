@@ -4,6 +4,9 @@ import jakarta.websocket.*;
 import jakarta.websocket.server.PathParam;
 import jakarta.websocket.server.ServerEndpoint;
 import java.util.concurrent.ConcurrentHashMap;
+
+import com.futcards.futcards_backend.model.PlayerCard;
+
 import java.util.Map;
 
 
@@ -31,7 +34,7 @@ public class GameWebSocketEndpoint {
     }
 
     @OnMessage
-    public void onMessage(String message, Session session) {
+    public void onMessage(PlayerCard message, Session session) {
         // Recebe mensagens dos jogadores e processa a entrada
         Player player = connectedPlayers.get(session.getId());
         if (player == null) {
