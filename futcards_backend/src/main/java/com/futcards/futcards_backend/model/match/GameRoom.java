@@ -1,6 +1,8 @@
 package com.futcards.futcards_backend.model.match;
 
 import java.util.*;
+
+import jakarta.validation.constraints.Null;
 import jakarta.websocket.Session;
 
 import com.futcards.futcards_backend.model.PlayerCard;
@@ -88,9 +90,25 @@ public class GameRoom {
     }
 
     private PlayerCard determineWinner(PlayerCard card1, PlayerCard card2) {
-        // Lógica para determinar a carta vencedora
-        // Simplesmente comparando o valor das cartas
-        return (card1.getValue() > card2.getValue()) ? card1 : card2;
+        this.getRandomQuestion();
+
+        switch (numRandomCard) {
+            case 0:
+                return (card1.getForca() > card2.getForca()) ? card1 : card2;
+            case 1:
+                return (card1.getAceleracao() > card2.getAceleracao()) ? card1 : card2;
+            case 2:
+                return (card1.getVelocidadeY() > card2.getVelocidadeY()) ? card1 : card2;
+            case 3:
+                return (card1.getVelocidadeY() > card2.getVelocidadeY()) ? card1 : card2;
+            case 4:
+                return (card1.getVelocidadeX() > card2.getVelocidadeX()) ? card1 : card2;
+            case 5:
+                return (card1.getAltura() > card2.getAltura()) ? card1 : card2;
+            default:
+                return (card1.getAceleracao() > card2.getAceleracao()) ? card1 : card2;
+        }
+
     }
 
     private void advancePlayer(Player winnerNickname) {
